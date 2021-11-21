@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import HandTrackingModule as htm
-import time
 import pyautogui
 from pynput.mouse import Button, Controller
 
@@ -21,6 +20,7 @@ capture.set(3,camWidth)
 capture.set(4,camHeight)
 detector = htm.handDetector(maxHands=1)
 frameReduction = 50 # Frame Reduction
+clicked = False
 
 SMOOTH = 7
 MINIMUM_DISTANCE_TO_CLICK = 40
@@ -61,9 +61,13 @@ while True:
             # 9. Find distance between fingers
             length, img, lineInfo = detector.findDistance(8,12,img)
             # 10. Click mouse if distance is short
-            if(length < MINIMUM_DISTANCE_TO_CLICK):
+            print(length)
+            if(length < MINIMUM_DISTANCE_TO_CLICK and clicked == False):
                 cv2.circle(img, (lineInfo[4],lineInfo[5]), 15, (255, 153, 0), cv2.FILLED)
-                mouse.click(Button.left, 2)
+                mouse.click(Button.left, 1)
+                clicked = True
+            elif(length > MINIMUM_DISTANCE_TO_CLICK):
+                clicked = False
 
     # 11. Display
     cv2.imshow("Image", img)
