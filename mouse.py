@@ -24,6 +24,7 @@ clicked = False
 
 SMOOTH = 7
 MINIMUM_DISTANCE_TO_CLICK = 40
+MINIMUM_DISTANCE_TO_DOUBLE_CLICK = 10
 
 while True:
 
@@ -62,11 +63,16 @@ while True:
             length, img, lineInfo = detector.findDistance(8,12,img)
             # 10. Click mouse if distance is short
             print(length)
-            if(length < MINIMUM_DISTANCE_TO_CLICK and clicked == False):
+            if(length < MINIMUM_DISTANCE_TO_CLICK and length > MINIMUM_DISTANCE_TO_DOUBLE_CLICK and clicked == False):
                 cv2.circle(img, (lineInfo[4],lineInfo[5]), 15, (255, 153, 0), cv2.FILLED)
                 mouse.click(Button.left, 1)
                 clicked = True
-            elif(length > MINIMUM_DISTANCE_TO_CLICK):
+            if(length < MINIMUM_DISTANCE_TO_DOUBLE_CLICK and clicked == False):
+                cv2.circle(img, (lineInfo[4],lineInfo[5]), 15, (255, 153, 0), cv2.FILLED)
+                mouse.click(Button.left, 2)
+                clicked = True
+
+            if(length > MINIMUM_DISTANCE_TO_CLICK):
                 clicked = False
 
     # 11. Display
