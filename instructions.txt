@@ -1,0 +1,75 @@
+source /Users/guuri11/miniforge3/bin/activate
+ 9949  conda create -n cv python=3.8.6\n
+ 9950  conda activate cv\n
+ 9951  conda install -c conda-forge opencv\n
+ 9952  python --version
+ 9953  conda install -c conda-forge pyautogui
+ 9954  pip -ve
+ 9955  pip -v
+ 9956  pip -version
+ 9957  python --version
+ 9958  /miniforge3/envs/cv/bin/python --version
+ 9959  ~/miniforge3/envs/cv/bin/python --version
+ 9960  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe
+ 9961  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9962  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe pyautogui
+ 9963  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9964  conda install -c conda-forge pynput\n
+ 9965  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe pyautogui pynput
+ 9966  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9967  source /Users/guuri11/miniforge3/bin/activate cv
+ 9968  ~/miniforge3/envs/cv/bin/python -m pip uninstall mediapipe opencv-python
+ 9969  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe==0.8.3.1 opencv-python==4.5.1.48
+ 9970  ~/miniforge3/envs/cv/bin/python -m pip install opencv-python==4.5.1.48
+ 9971  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe==0.8.3
+ 9972  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe-silicon==0.8.3
+ 9973  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe-silicon
+ 9974  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9975  ~/miniforge3/envs/cv/bin/python -m pip uninstall mediapipe-silicon
+ 9976  ~/miniforge3/envs/cv/bin/python -m pip uninstall mediapipe
+ 9977  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe
+ 9978  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9979  install mediapipe version 1.4.1
+ 9980  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe version 1.4.1
+ 9981  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe==1.4.1
+ 9982  ~/miniforge3/envs/cv/bin/python -m pip install mediapipe version 1.4.1
+ 9983  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9984  source /Users/guuri11/miniforge3/bin/activate cv
+ 9985  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9986  source /Users/guuri11/miniforge3/bin/activate cv
+ 9987  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9988  cd ..
+ 9989  cd python/
+ 9990  cd virtual-mouse/
+ 9991  conda activate cv\n
+ 9992  source /Users/guuri11/miniforge3/bin/activate cv
+ 9993  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9994  code .
+ 9995  source /Users/guuri11/miniforge3/bin/activate cv
+ 9996  ~/miniforge3/envs/cv/bin/python -m pip install autopy
+ 9997  conda install -c conda-forge autopy
+ 9998  ~/miniforge3/envs/cv/bin/python mouse.py
+ 9999  cd Documents/python/
+10000  cd virtual-mouse/
+10001  source /Users/guuri11/miniforge3/bin/activate cv
+10002  ~/miniforge3/envs/cv/bin/python mouse.py
+10003  code .
+10004  conda activate cv
+10005  source /Users/guuri11/miniforge3/bin/activate cv
+10006  conda activate cv
+10007  ~/miniforge3/envs/cv/bin/python mouse.py
+10008  conda activate cv
+10009  ~/miniforge3/envs/cv/bin/python mouse.py
+10010  conda activate cv
+10011  ~/miniforge3/envs/cv/bin/python mouse.py
+10012  conda activate cv
+10013  ~/miniforge3/envs/cv/bin/python mouse.py
+10014  conda activate cv
+10015  ~/miniforge3/envs/cv/bin/python mouse.py
+10016  code .
+10017  ~/miniforge3/envs/cv/bin/python mouse.py
+10018  conda activate cv
+10019  ~/miniforge3/envs/cv/bin/python mouse.py
+10020  conda activate cv
+10021  ~/miniforge3/envs/cv/bin/python mouse.py
+10022  conda activate cv

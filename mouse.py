@@ -18,7 +18,7 @@ capture.set(3,camWidth)
 
 # define height
 capture.set(4,camHeight)
-detector = htm.handDetector(maxHands=1)
+detector = htm.handDetector(maxHands=2)
 frameReduction = 50 # Frame Reduction
 clicked = False
 
@@ -37,21 +37,20 @@ while True:
     if(len(lmList) != 0):
         xIndexFinger, yIndexFinger = lmList[8][1:]
         xMiddleFinger, yMiddleFInger = lmList[12][1:]
-        
+
         # 3. Check finger is up
         fingers = detector.fingersUp()
         cv2.rectangle(img, (frameReduction, frameReduction), (camWidth - frameReduction, camHeight - frameReduction), (51, 51, 204), 2)
-
         # 4. Only Index finger: Moving mode
         if(fingers[1] == 1 and fingers[2] == 0 ):
             # 5. Convert our coords
             x3 = np.interp(xIndexFinger, (frameReduction, camWidth - frameReduction), (0, screenWidth))
             y3 = np.interp(yIndexFinger, (frameReduction, camHeight - frameReduction), (0, screenHeight))
 
-            # 6. Smoothen values
+            # 6. Smoothen vxalues
             currentLocationX = previousLocationX + (x3 - previousLocationX) / SMOOTH
             currentLocationY = previousLocationY + (y3 - previousLocationY) / SMOOTH
-            
+
             # 7. Move mouse
             mouse.position = (screenWidth - currentLocationX, currentLocationY)
             cv2.circle(img, (xIndexFinger,yIndexFinger), 15, (51, 51, 204), cv2.FILLED)
@@ -62,7 +61,7 @@ while True:
             # 9. Find distance between fingers
             length, img, lineInfo = detector.findDistance(8,12,img)
             # 10. Click mouse if distance is short
-            print(length)
+
             if(length < MINIMUM_DISTANCE_TO_CLICK and length > MINIMUM_DISTANCE_TO_DOUBLE_CLICK and clicked == False):
                 cv2.circle(img, (lineInfo[4],lineInfo[5]), 15, (255, 153, 0), cv2.FILLED)
                 mouse.click(Button.left, 1)
